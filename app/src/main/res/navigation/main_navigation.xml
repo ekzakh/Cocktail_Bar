@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/initialFragment">
+
+    <fragment
+        android:id="@+id/initialFragment"
+        android:name="com.ekzakh.cocktailbar.initial.InitialFragment"
+        tools:layout="@layout/fragment_initial" >
+        <action
+            android:id="@+id/action_initialFragment_to_createCocktailFragment"
+            app:destination="@id/createCocktailFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cocktailsFragment"
+        android:name="com.ekzakh.cocktailbar.cocktails.presentation.CocktailsListFragment"
+        tools:layout="@layout/fragment_coctails_list" />
+
+    <fragment
+        android:id="@+id/createCocktailFragment"
+        android:name="com.ekzakh.cocktailbar.create.presentation.CreateCocktailFragment"
+        tools:layout="@layout/fragment_create_cocktail" />
+
+</navigation>
