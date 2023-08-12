@@ -1,0 +1,25 @@
+name: Android Lint Check
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3.4.0
+      - name: Set up JDK
+        uses: actions/setup-java@v3.10.0
+        with:
+          distribution: 'temurin'
+          java-version: '11'
+      - name: release-downloader
+        uses: robinraju/release-downloader@v1.7
+        with:
+          latest: true
+      - name: ktlint
+        uses: ScaCap/action-ktlint@v1.7.1
+        with:
+          reporter: github-pr-review
+          filter_mode: file
+          fail_on_error: true
+          android: true
