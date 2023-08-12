@@ -19,7 +19,7 @@ jobs:
           distribution: 'temurin'
           java-version: '11'
       - name: ktlint
-        uses: ScaCap/action-ktlint@master
+        uses: ScaCap/action-ktlint@v1.7.1
         with:
           github_token: ${{ secrets.github_token }}
           reporter: github-pr-review
