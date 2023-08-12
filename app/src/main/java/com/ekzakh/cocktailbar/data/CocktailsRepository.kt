@@ -9,7 +9,7 @@ interface CocktailsRepository {
 
     class Base(private val cocktailsDao: CocktailsDao) : CocktailsRepository {
 
-        override suspend fun cocktails(): List<Cocktail> = cocktailsDao.cocktails()
+        override suspend fun cocktails(): List<Cocktail> =  cocktailsDao.cocktails()
 
         override suspend fun cocktail(id: Int): Cocktail = cocktailsDao.cocktail(id)
     }
