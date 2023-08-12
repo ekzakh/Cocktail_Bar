@@ -12,10 +12,6 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-      - name: release-downloader
-        uses: robinraju/release-downloader@v1.7
-        with:
-          latest: true
       - name: ktlint
         uses: ScaCap/action-ktlint@v1.7.1
         with:
