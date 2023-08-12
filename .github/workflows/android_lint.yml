@@ -12,8 +12,8 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '11'
-      - name: ktlint
-        uses: ScaCap/action-ktlint@v1.7.1
+      - name: Run ktlint with reviewdog
+        uses: ScaCap/action-ktlint@v1.7.3
         with:
           reporter: github-pr-review
           filter_mode: file
