@@ -6,7 +6,7 @@ import com.ekzakh.cocktailbar.data.CocktailsRepository
 interface InitialViewModel {
     fun init()
 
-    class Base() : ViewModel(), InitialViewModel {
+    class Base()  : ViewModel(), InitialViewModel {
         override fun init() {
         }
     }
